@@ -1,113 +1,203 @@
-# Python-Tutorial
+# 문자열 기본 기능
 
-## Python Home
-print("Hello, World!")  # 출력 함수를 이용하여 "Hello, World!"를 출력한다.
-
-## Python Syntax 
-# Python Indentation
-if 5 > 2:  # 만약 5가 2보다 크다면
-    print("Five is greater than two!")  # "Five is greater than two!"를 출력한다.
-
-# Python Variables
-x = 112  # 변수 x에 112를 할당한다.
-y = "Hello, World!"  # 변수 y에 "Hello, World!" 문자열을 할당한다.
-
-# Comment
-# 코드의 한 줄을 주석 처리한다.
-# print("Hello, World!") 
-
-# Python Comments
-# 한 줄 주석
-print("Hello, World!")  # 한 줄 끝에 주석을 작성한다.
-
-# Multiline Comments
-"""
-안녕하세요
-감사합니다
-잘 부탁드립니다
-"""
-print("Hello, World!")  # 여러 줄에 걸친 주석을 작성한다.
-
-## Python Variables
-# 변수에 값을 할당한다.
-x = 10
-y = "HoYoung"
-print(x)
-print(y)
-
-# 다른 유형으로 변수를 설정한다 (int : 정수형 , str : 문자열)
-x = 5       # 정수형으로 작성된 변수
-x = "Sally" # 문자열로 작성된 변수
-print(x)
-
-# 문자열, 정수형, 실수형 등 원하는 데이터 유형으로 지정할 수 있다.
-x = str(3)    # x는 '3'이 다.
-y = int(3)    # y는 3이 된다.
-z = float(3)  # z는 3.0이 된다.
-print(type(x))
-print(type(y))
-pri한다.
-# 숫자의 경우 + 문자는 수학 연산자로 작동한다.
-x = 2
-y = 3
-print(x + y)
-
-# 함수에서 print() 문자열과 숫자를 + 연산자와 결합하려고 하면 Python에서 오류를 표시한다.
-x = 5
-y = "John"
-print(str(x) + y)
-
-# 함수에서 여러 변수를 출력하는 가장 좋은 방법은 print() 변수를 쉼표로 구분하는 것이다.
-x = 7
-y = "HoYoung"
-print(x, y)
-
-## Python Data Types
-# 데이터 유형을 가져온다.
-x = 5
-print(type(x))
-
-## Python Numbers
-# 숫자 유형에는 정수(int), 실수(float), 복소수(complex)가 있다.
-# 한 유형에서 다른 유형으로 변환할 수 있다.
-x = 1    # int
-y = 2.8  # float
-z = 1j   # complex
-
-a = float(x)
-b = int(y)
-c = complex(x)
-
-print(a)
-print(b)
-print(c)
-
-print(type(a))
-print(type(b))
-print(type(c))
-
-## Python Strings
-# 문자열 유형은 작은따옴표나 큰따옴표로 묶인다.
-# 변수에 문자열을 할당한다.
-a = "고마워"
-print(a)
-
-# 문자열 요소에 액세스한다.
-a = "안녕, 반가워"
-print(a[1])
-
-# 문자열을 반복하여 출력한다.
-for x in "catia":
-    print(x)
-
-# 문자열 길이를 출력한다.
+# 문자열 생성
 a = "Hello, World!"
-print(len(a))
 
-# 문자열 검사
-txt = "안녕하세요, 반갑습니다"
-print("고마워요" not in txt)
+# 문자열 길이 확인
+len(a)  # 결과: 13
 
-txt = "안녕하세요, 반갑습니다"
-if "고마워요" not in txt:
-    print("No, '고마워요' is NOT present.")
+# 문자열 인덱싱
+a[1]  # 결과: 'e'
+
+# 문자열 슬라이싱
+a[2:5]  # 결과: 'llo'
+
+# 문자열 수정
+a.upper()  # 결과: 'HELLO, WORLD!'
+a.lower()  # 결과: 'hello, world!'
+a.strip()  # 결과: 'Hello, World!'
+a.replace("H", "J")  # 결과: 'Jello, World!'
+a.split(",")  # 결과: ['Hello', ' World!']
+
+# 문자열 연결
+b = " How are you?"
+a + b  # 결과: 'Hello, World! How are you?'
+"{} How are you?".format(a)  # 결과: 'Hello, World! How are you?'
+
+# 이스케이프 문자
+txt = "We are the so-called \"Vikings\" from the north."  # 결과: 'We are the so-called "Vikings" from the north.'
+
+# 연산자
+
+# 산술 연산자
+x = 10
+y = 5
+x + y  # 결과: 15
+x - y  # 결과: 5
+x * y  # 결과: 50
+x / y  # 결과: 2.0
+x % y  # 결과: 0
+x ** y  # 결과: 100
+x // y  # 결과: 2
+
+# 할당 연산자
+x = 5
+x += 3  # 결과: 8
+x -= 3  # 결과: 2
+x *= 3  # 결과: 15
+x /= 3  # 결과: 5.0
+x %= 3  # 결과: 2
+x //= 3  # 결과: 0
+x **= 3  # 결과: 0
+
+# 비교 연산자
+x = 5
+y = 3
+x == y  # 결과: False
+x != y  # 결과: True
+x > y  # 결과: True
+x < y  # 결과: False
+x >= y  # 결과: True
+x <= y  # 결과: False
+
+# 논리 연산자
+x = 5
+x > 3 and x < 10  # 결과: True
+x > 3 or x < 4  # 결과: True
+not(x > 3 and x < 10)  # 결과: False
+
+# 리스트 기본 기능
+
+# 리스트 생성
+thislist = ['apple', 'banana', 'cherry']
+
+# 리스트 인덱싱 및 슬라이싱
+thislist[1]  # 결과: 'banana'
+thislist[2:5]  # 결과: ['cherry']
+
+# 리스트 항목 추가/제거
+thislist.append('orange')  # 결과: ['apple', 'banana', 'cherry', 'orange']
+thislist.insert(1, 'watermelon')  # 결과: ['apple', 'watermelon', 'banana', 'cherry', 'orange']
+thislist.remove('banana')  # 결과: ['apple', 'watermelon', 'cherry', 'orange']
+thislist.clear()  # 결과: []
+
+# 리스트 확장
+thislist = ['apple', 'banana', 'cherry']
+tropical = ['mango', 'pineapple', 'papaya']
+thislist.extend(tropical)  # 결과: ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+# 리스트 컴프리헨션
+fruits_with_a = [x for x in thislist if "a" in x]  # 결과: ['banana', 'mango', 'pineapple', 'papaya']
+
+# 리스트 정렬
+thislist.sort()  # 결과: ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+thislist.sort(reverse=True)  # 결과: ['papaya', 'pineapple', 'mango', 'cherry', 'banana', 'apple']
+
+# 루프
+
+# While 루프
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+# 결과:
+# 1
+# 2
+# 3
+# 4
+# 5
+
+# Break 문
+i = 1
+while i < 6:
+    print(i)
+    if i == 3:
+        break
+    i += 1
+# 결과:
+# 1
+# 2
+# 3
+
+# Continue 문
+i = 0
+while i < 6:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+# 결과:
+# 1
+# 2
+# 4
+# 5
+# 6
+
+# For 루프
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+# 결과:
+# apple
+# banana
+# cherry
+
+# For Else 문
+for x in range(6):
+    print(x)
+else:
+    print("Finally finished!")
+# 결과:
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
+# Finally finished!
+
+# 중첩 루프
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+    for y in fruits:
+        print(x, y)
+# 결과:
+# red apple
+# red banana
+# red cherry
+# big apple
+# big banana
+# big cherry
+# tasty apple
+# tasty banana
+# tasty cherry
+
+# 추가 기능
+
+# In 연산자
+txt = "apple" in fruits  # 결과: True
+
+# Remove 문
+fruits.remove("banana")  # 결과: ['apple', 'cherry']
+
+# Clear 문
+fruits.clear()  # 결과: []
+
+# While 루프 사용 예시
+i = 0
+while i < 10:
+    print(i)
+    i += 1
+# 결과:
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
